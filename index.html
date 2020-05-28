@@ -10,12 +10,36 @@
 </head>
 
 <body>
-    <div>
-        <p>Task 1. Создайте переменную a = 4. Используя конструкцию if проверьте то a == 4. Выведите сообщение в
-            консоль.</p>
-        <button class="task-1">button</button>
+    <header>
+        <div class="container">
+            <h1>Сайт прогноза погоды по основным городам Египта</h1>
+        </div>
+    </header>
+
+    <div class="contaier">
+        <div>
+            <h2>Нажмите на кнопку города</h2>
+        </div>
+        <div class="btn-list">
+            <button class="btn" name="Alexandria" value="361058">Alexandria</button>
+            <button class="btn" name="Cairo" value="360630">Cairo</button>
+            <button class="btn" name="Dahab" value="358245">Dahab</button>
+            <button class="btn" name="Hurghada" value="361291" >Hurghada</button>
+            <button class="btn" name="Marsa Alam" value="352736">Marsa Alam</button>
+            <button class="btn" name="Sharm-El-Sheikh" value="349340" >Sharm-El-Sheikh </button>
+        </div>
     </div>
-    <hr>
+
+    <div class="container">
+        <div class="weather-box">
+            <p class="city-name"></p>
+            <hr>
+            <p class="degrees"></p>
+            <p class="condition"></p>
+            <hr>
+            <p class="icon"></p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
