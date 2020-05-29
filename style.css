@@ -1,15 +1,105 @@
-html, body {
-    font-family: serif;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-body {
-    margin: 20px;
+header {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
 }
 
-.hide {
-    display: none;
+.btn-heading {
+    margin-top: 20px;
+    text-align: center;
 }
 
-.show {
-    display: block;
+.container {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btn-list {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn {
+	box-shadow: 0px 1px 10px 0px #fce2c1;
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	background-color:#ffc477;
+	border-radius:6px;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc9f52;
+}
+.btn:hover {
+	background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+	background-color:#fb9e25;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+}
+
+.weather-box {
+    margin: 0 auto;
+    padding: 5%;
+    width: 30%;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+    background: #22c1c3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #fdbb2d, #22c1c3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    line-height: 30px;
+}
+
+.city-name {
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.date {
+    margin-bottom: 20px;
+}
+
+.temperature {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.condition {
+    text-transform: uppercase;
+}
+
+.pressure {
+    margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 850px) {
+    .btn-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn {
+        margin: 20px 5px;
+    }
+
+    .weather-box {
+        width: 65%;
+    }
 }

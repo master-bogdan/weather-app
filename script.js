@@ -1,5 +1,6 @@
 'use strict';
 
+// Функция выбора ID города по клику на кнопку с Value города
     let cityId = '361058';
     let cityIdArr = function() {
     const btns = document.querySelectorAll('.btn');
@@ -9,12 +10,12 @@
                 getWeather(cityId);
             });
         }
-         console.log(btns);
     };
 
-    console.log(cityId);
-    console.log(cityIdArr(361058));
+// Функция даты
+    const date = new Date().toLocaleString();
 
+    cityIdArr();
     getWeather(cityId);
 
 function getWeather(cityId) {
@@ -24,14 +25,12 @@ fetch(url)
         .then(function (data) {
             console.log(data);
             document.querySelector('.city-name').textContent = data.name;
-            document.querySelector('.temperature').innerHTML= 'Температура ' + Math.round(data.main.temp - 273) + '&deg;';
-            document.querySelector('.min-temperature').innerHTML= 'Минимальная температура ' + Math.round(data.main.temp_min - 273) + '&deg;';
-            document.querySelector('.max-temperature').innerHTML= 'Максимальная температура ' + Math.round(data.main.temp_max - 273) + '&deg;';
+            document.querySelector('.date').innerHTML = `Текущая дата и  время ${date}`;
+            document.querySelector('.temperature').innerHTML= 'Температура воздуха ' + Math.round(data.main.temp - 273) + '&deg;';
             document.querySelector('.condition').textContent = data.weather[0].description;
             document.querySelector('.icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">`;
-            document.querySelector('.pressure').textContent = `Давление ${data.main.pressure} мбар`;
+            document.querySelector('.pressure').textContent = `Атмосферное давление ${data.main.pressure} мбар`;
             document.querySelector('.wind').innerHTML = `Скорость ветра ${data.wind.speed} м/с`;
-            document.querySelector('.sunset').textContent = data.sys.sunset;
         })
         .catch(function () {
 
