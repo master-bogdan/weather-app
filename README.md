@@ -1,4 +1,4 @@
-:sunny: :umbrella: :cloud:Simple JS weather application
+:sunny: :umbrella: :cloud: Simple JS weather application
 ================
 ###### v.0.0.1
 It shows weather for now in main cities of Egypt. You can choose city by pressing button with city name. It use openweather API.
